@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: BakerySH
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor\n// Available at the Unity
+    Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=17300\n8;4;2546;1371;1002.919;868.6625;1;True;False\nNode;AmplifyShaderEditor.FunctionInput;23;-174.7974,-383.8479;Inherit;False;Normal;3;1;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionInput;37;336.1921,182.3253;Inherit;False;Smoothness;1;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SamplerNode;1;-566.7972,-395.8479;Inherit;True;Property;_NormalMap;_NormalMap;0;0;Create;True;0;0;False;0;-1;None;None;True;0;False;bump;Auto;False;Object;-1;Auto;Texture2D;6;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionNode;40;37.20266,-475.8479;Inherit;True;PerPixelNormal;1;;2;bc69c2430d183ed4a89ca6cce4b42bf6;0;1;15;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.TextureCoordinatesNode;38;100.1921,-227.6747;Inherit;False;1;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.ViewDirInputsCoordNode;34;85.75085,12.79901;Inherit;True;World;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.SimpleAddOpNode;26;468.014,-555.2078;Inherit;True;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.CustomExpressionNode;19;574.3,-211;Inherit;False;float2
+    uvOut = 1@$LightmapUV_float(uv, uvOut)@$$float3 diff = 0@$BakerySpecSH_float(L0,
+    normalWorld, uvOut, viewDir, smoothness, diff, specularSH)@$$return diff@;3;False;6;False;L0;FLOAT3;0,0,0;In;;Float;False;False;normalWorld;FLOAT3;0,0,0;In;;Float;False;False;uv;FLOAT2;0,0;In;;Float;False;False;viewDir;FLOAT3;0,0,0;In;;Float;False;False;smoothness;FLOAT;0;In;;Float;False;True;specularSH;FLOAT3;0,0,0;Out;;Float;False;BakerySpecularSH;False;False;0;6;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT2;0,0;False;3;FLOAT3;0,0,0;False;4;FLOAT;0;False;5;FLOAT3;0,0,0;False;2;FLOAT3;0;FLOAT3;6\nNode;AmplifyShaderEditor.IndirectDiffuseLighting;32;98.01401,-569.2078;Inherit;False;World;1;0;FLOAT3;0,0,1;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;0;1313.751,-193.1824;Inherit;False;True;-1;Diffuse
+    Output;1;True;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;39;1300.192,-52.67474;Inherit;False;False;-1;Specular
+    Output;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;23;0;1;0\nWireConnection;40;15;23;0\nWireConnection;26;0;32;0\nWireConnection;19;0;32;0\nWireConnection;19;1;40;0\nWireConnection;19;2;38;0\nWireConnection;19;3;34;0\nWireConnection;19;4;37;0\nWireConnection;0;0;19;0\nWireConnection;39;0;19;6\nASEEND*/\n//CHKSM=C2F02B68F0D5EC7E8A93E4FEFD4C5B1E09385EBE"
+  m_functionName: 
+  m_description: 'Specular Spherical Harmonics with Bakery''s SH Bake Mode
+
+
+    Plug
+    Diffuse into Override Baked GI (must be enabled in Main Node Additional Options)
+    and Specular into Emission
+
+
+    Currently only compatible with HDRP and URP
+    with an Updated ASE to support Overridden Baked GI'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 1
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_additionalDirectives:
+    - {fileID: 0}
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems:
+    - LineType: 0
+      LineValue: BakeryASE.cginc
+      GUIDToggle: 0
+      GUIDValue: 
+      Origin: 2
+  m_nodeCategory: 0
+  m_customNodeCategory: Bakery
+  m_previewPosition: 0
+  m_hidden: 0
